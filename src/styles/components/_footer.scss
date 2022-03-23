@@ -1,0 +1,19 @@
+@import "../core/variables";
+
+footer {
+  width: 100%;
+  height: 3.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(90deg, #5a5789 0%, #2d2c45 100%) 0% 0% no-repeat;
+
+  span {
+    font-size: $mediumHeadingSize;
+    font-weight: $fontBold;
+
+    color: $gridColor;
+  }
+}

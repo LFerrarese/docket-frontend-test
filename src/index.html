@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Docket</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles/app.scss" />
+  </head>
+  <body>
+    <div class="modal" id="Loader">
+      <div class="loader">
+        <div class="loader-animated">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div class="toast" id="Toast"></div>
+
+    <header>
+      <img src="assets/images/logo.svg" alt="Logo Docket" />
+    </header>
+    <main>
+      <h1>Pedido #1</h1>
+
+      <section class="box">
+        <h2>Lead: Documento para criar contato</h2>
+        <p>
+          <strong>Observação:</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+          condimentum iaculis dolor id scelerisque. Cras leo risus, rutrum in
+          tempus in, fermentum sit amet ex. Ut hendrerit, odio nec interdum
+          condimentum, tortor nisi tempor nisl, eu tristique dolor nisl vel
+          arcu. Ut hendrerit tincidunt ligula at tempor. Vivamus pellentesque
+          erat in erat vehicula blandit. Vivamus sit amet pretium leo. Etiam sed
+          mi accumsan, bibendum sapien id, sollicitudin nulla. Donec cursus
+          turpis sed felis faucibus condimentum. Aenean quis congue lorem, id
+          pulvinar lectus. Aliquam semper, diam a vestibulum pellentesque, nibh
+          elit dignissim augue, a luctus sapien ante a mi. Aliquam aliquet
+          egestas felis vel lacinia. Suspendisse potenti. Vestibulum vitae
+          iaculis purus, id mattis odio.
+        </p>
+        <div class="row">
+          <p>
+            <strong>Criado por:</strong>
+            João da Silva
+          </p>
+          <p>
+            <strong>Data de criação:</strong>
+            11 de maio de 2021
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid">
+          <form>
+            <div class="box with-heading">
+              <div class="heading">
+                <h2>Adicionar documentos ao pedido</h2>
+              </div>
+              <div class="content">
+                <div class="form-group">
+                  <label for="DocumentName">Nome do documento:</label>
+                  <input
+                    id="DocumentName"
+                    type="text"
+                    required="required"
+                    placeholder="Digite aqui"
+                    name="documentName"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="DocumentType">Tipo de pessoa:</label>
+                  <select
+                    id="DocumentType"
+                    required="required"
+                    name="documentType"
+                  >
+                    <option selected value="FISICA">Pessoa física</option>
+                    <option value="JURIDICA">Pessoa jurídica</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="DocumentNumber">CPF:</label>
+                  <input
+                    id="DocumentNumber"
+                    type="text"
+                    required="required"
+                    placeholder="Digite aqui"
+                    data-type="cpf"
+                    name="documentNumber"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="Name">Nome Completo:</label>
+                  <input
+                    id="Name"
+                    type="text"
+                    required="required"
+                    placeholder="Digite aqui"
+                    name="name"
+                  />
+                </div>
+                <h3>Dados do cartório</h3>
+                <div class="form-group">
+                  <label for="AddressZipcode">CEP:</label>
+                  <input
+                    id="AddressZipcode"
+                    type="text"
+                    required="required"
+                    placeholder="Digite aqui"
+                    name="addressZipcode"
+                  />
+                </div>
+                <div class="row">
+                  <div class="form-group">
+                    <label for="AddressBlock">Rua:</label>
+                    <input
+                      id="AddressBlock"
+                      type="text"
+                      required="required"
+                      placeholder="Digite aqui"
+                      disabled
+                      name="addressBlock"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="AddressNumber">Número:</label>
+                    <input
+                      id="AddressNumber"
+                      type="text"
+                      required="required"
+                      placeholder="Digite aqui"
+                      disabled
+                      name="addressNumber"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group">
+                    <label for="AddressCity">Cidade:</label>
+                    <input
+                      id="AddressCity"
+                      type="text"
+                      required="required"
+                      placeholder="Digite aqui"
+                      disabled
+                      name="addressCity"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="AddressState">UF:</label>
+                    <input
+                      id="AddressState"
+                      type="text"
+                      required="required"
+                      placeholder="Digite aqui"
+                      disabled
+                      name="addressState"
+                    />
+                  </div>
+                </div>
+                <button type="submit" id="CreateDocument">
+                  Criar documento
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="documents">
+            <!-- <div class="box right">
+              <div class="empty-document">
+                <div class="empty-document-wrapper">
+                  <img
+                    src="assets/images/document.svg"
+                    alt="Nenhum documento criado"
+                  />
+                </div>
+                <span>Nenhum documento criado</span>
+              </div>
+            </div> -->
+            <div class="box with-heading documents-document">
+              <div class="heading">
+                <div class="document-heading">
+                  <h2>Certidão de nascimento</h2>
+                  <img src="assets/images/delete.svg" />
+                </div>
+              </div>
+              <div class="content"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>DOCKET &copy; 2022</span>
+    </footer>
+
+    <script src="js/app.ts"></script>
+  </body>
+</html>

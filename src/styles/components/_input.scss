@@ -1,0 +1,25 @@
+@import "../core/variables";
+
+input:not([type="files"]),
+select {
+  height: 2.5rem;
+
+  border: solid 1px $inputBorderColor;
+  border-radius: 2px;
+  padding: 0 1rem;
+
+  background-color: $gridColor;
+
+  &::placeholder {
+    font-size: $textSize;
+    opacity: 0.4;
+  }
+
+  &:disabled {
+    background-color: #efefef;
+  }
+}
+
+select {
+  padding: 0 0.9rem;
+}

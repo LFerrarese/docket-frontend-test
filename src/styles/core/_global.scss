@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+@import "./variables";
+@import "../mixins/breakpoints";
+
+html {
+  @include mobile-layout {
+    font-size: 93.75%;
+  }
+
+  @include small-desktop-layout {
+    font-size: 87.5%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: $fontFamily;
+}
+
+body {
+  font-size: $textSize;
+  font-weight: $fontRegular;
+  color: $textColor;
+
+  background-color: $backgroundColor;
+}
+
+h1 {
+  font-size: $largeHeadingSize;
+  font-weight: $fontBold;
+}
+
+h2 {
+  font-size: $mediumHeadingSize;
+  font-weight: $fontSemiBold;
+}
+
+h3 {
+  font-size: $smallHeadingSize;
+  font-weight: $fontSemiBold;
+}

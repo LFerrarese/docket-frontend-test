@@ -1,0 +1,11 @@
+@import "../mixins/breakpoints";
+
+.grid {
+  display: grid;
+  grid-template-columns: 33rem 1fr;
+  grid-gap: 1rem;
+
+  @include mobile-layout {
+    grid-template-columns: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+@import "../core/variables";
+
+@mixin mobile-layout {
+  @media (max-width: #{$mobileBreakpoint - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-desktop-layout {
+  @media (max-width: #{$smallDesktopBreakpoint - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-layout {
+  @media (min-width: $desktopBreakpoint) {
+    @content;
+  }
+}

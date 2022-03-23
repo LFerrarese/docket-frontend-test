@@ -1,0 +1,18 @@
+@import "../core/variables";
+@import "../mixins/breakpoints";
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  div.row {
+    display: flex;
+    gap: 3rem;
+
+    @include mobile-layout {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}
